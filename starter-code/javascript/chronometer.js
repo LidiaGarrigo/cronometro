@@ -1,7 +1,7 @@
 
 class Chronometer {
-    currentTime;
-    intervalId;
+    currentTime; //no es necesario
+    intervalId; //no es necesario, ya definidos en linias 7 y 8
 
     constructor() {
         this.currentTime = 0;
@@ -13,7 +13,8 @@ class Chronometer {
         this.intervalId = setInterval(() => {
             this.currentTime++;
             this.setTime();
-            
+            // console.log(this.minutes+':'+this.seconds);
+            printTime(this.minutes,this.seconds);
         }, 1000)
     }
 
@@ -43,7 +44,7 @@ class Chronometer {
     }
 
     stopClick() {
-        clearInterval(this.intervalId)
+        clearInterval(this.intervalId);
     }
 
     resetClick() {
